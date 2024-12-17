@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+    <script
+      src="https://kit.fontawesome.com/00752dc926.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="grid grid-cols-3 gap-4 p-4">
+    <button id="openModalBtn" class="bg-blue-500 text-white p-2 rounded">
+      Öppna Modal
+    </button>
+    <div
+      id="accessibleModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      aria-hidden="true"
+      class="bg-yellow-100 p-4 rounded"
+    >
+      <h2 id="modalTitle" class="text-xl font-bold">Example on modal</h2>
+      <p class="mt-2">Here is some text</p>
+      <button id="closeModalBtn" class="mt-4 bg-red-500 text-white p-2 rounded">
+        close
+      </button>
+    </div>
+
+    <button id="openDialogBtn" class="bg-blue-500 text-white p-2 rounded">
+      Öppna Dialog
+    </button>
+    <dialog
+      id="accessibleDialog"
+      class="w-full max-w-xs mx-auto p-4 bg-red-400"
+    >
+      <h2 class="text-xl font-bold">
+        Example on accesebility modal window med &lt;dialog&gt;
+      </h2>
+      <p class="mt-2">Content</p>
+      <button
+        id="closeDialogBtn"
+        class="mt-4 bg-red-500 text-white p-2 rounded"
+      >
+        close
+      </button>
+    </dialog>
+    <!-- Vilka är fördelarna med att använda denna i tillgänglighets-synpunkt? Skriv svar i kommentarerna till koden.
+     inbyggd funktionalitet i dialogen, mindre kod & fokus i att de hanteras automatiskt. -->
+    <!------------------Meny---------------------------->
+    <div class="bg-gray-200 p-4 rounded">
+      <button
+        id="menuButton"
+        aria-expanded="false"
+        aria-controls="menuContent"
+        aria-label="Meny"
+        class="w-full bg-blue-500 text-white p-2 rounded"
+      >
+        <i class="fa-solid fa-bars"></i>
+
+        Meny
+      </button>
+      <nav id="menuContent" aria-hidden="true" class="mt-4">
+        <ul class="space-y-2">
+          <li><a href="#" class="text-blue-500 hover:underline">Home</a></li>
+          <li>
+            <a href="#" class="text-blue-500 hover:underline">About Us</a>
+          </li>
+          <li>
+            <a href="#" class="text-blue-500 hover:underline">Colors</a>
+          </li>
+          <li><a href="#" class="text-blue-500 hover:underline">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <script src="code.js"></script>
+  </body>
+</html>
